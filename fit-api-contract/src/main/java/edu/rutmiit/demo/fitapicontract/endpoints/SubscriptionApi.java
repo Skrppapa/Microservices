@@ -30,6 +30,7 @@ public interface SubscriptionApi {
             @Parameter(description = "Размер страницы") @RequestParam(defaultValue = "10") int size
     );
 
+
     @Operation(summary = "Создать новый абонемент")
     @ApiResponse(responseCode = "201", description = "Абонемент успешно создан")
     @ApiResponse(responseCode = "400", description = "Невалидный запрос", content = @Content(schema = @Schema(implementation = StatusResponse.class)))
