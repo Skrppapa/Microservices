@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="rest_fit:jar">
-    <output-path>$PROJECT_DIR$/out/artifacts/rest_fit_jar</output-path>
-    <root id="archive" name="rest_fit.jar">
-      <element id="module-output" name="rest_fit" />
-    </root>
-  </artifact>
-</component>
