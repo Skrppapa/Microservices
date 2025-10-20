@@ -17,6 +17,7 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @Component
 public class InMemoryStorage {
+
     public final Map<Long, ClientResponse> clients = new ConcurrentHashMap<>();
     public final Map<Long, GymResponse> gyms = new ConcurrentHashMap<>();
     public final Map<Long, MembershipResponse> memberships = new ConcurrentHashMap<>();
@@ -73,9 +74,9 @@ public class InMemoryStorage {
 
         GymResponse gym3 = new GymResponse(
                 gymSequence.incrementAndGet(),
-                "пр. Ленина, 45",
-                80,
-                List.of("бокс", "единоборства", "функциональный тренинг")
+                "пр. Молодежный, 7",
+                75,
+                List.of("тренажерный зал", "пилатес", "сауна")
         );
 
         gyms.put(gym1.id(), gym1);
@@ -87,27 +88,21 @@ public class InMemoryStorage {
                 membershipSequence.incrementAndGet(),
                 "1234567890",
                 "12 месяцев",
-                "Премиум",
-                client1.id(),
-                gym1.id()
+                "Премиум"
         );
 
         MembershipResponse membership2 = new MembershipResponse(
                 membershipSequence.incrementAndGet(),
                 "0987654321",
                 "6 месяцев",
-                "Стандарт",
-                client2.id(),
-                gym2.id()
+                "Стандарт"
         );
 
         MembershipResponse membership3 = new MembershipResponse(
                 membershipSequence.incrementAndGet(),
                 "1122334455",
                 "3 месяца",
-                "Базовый",
-                client3.id(),
-                gym3.id()
+                "Базовый"
         );
 
         memberships.put(membership1.id(), membership1);
